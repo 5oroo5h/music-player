@@ -10,34 +10,46 @@
 </head>
 
 <body>
+    <div class="background">
+        <img src="/bg-images/Slash.jpg" alt="" class="background-image">
+    </div>
+
     <div class="audio-container">
         <div class="audio-box">
-            <audio id="music" class="music">
-                <source src="media/1.MP3"></audio>
-            <div class="top-items">
-                <div class="menu"><i class="fa-solid fa-bars"></i></div>
-                <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <audio src="media/06. Slash - The Godfather Theme (Live In Tokyo 1992).mp3" id="music"
+                class="music"></audio>
+
+            <div class="music-cover">
+                <img src="bg-images/Slash.jpg" alt="music-cover" id="image" class="active">
             </div>
-            <div class="buttom-items">
+            <div class="song-info">
+                <span class="title">The Godfather</span>
+                <span class="artist">Slash</span>
+            </div>
+            <div class="bottom-items">
                 <div class="audio-control-box">
                     <div class="audio-options">
                         <div class="shuffle"><i class="fa-solid fa-shuffle"></i></div>
                         <div class="repeat"><i class="fa-solid fa-repeat"></i></div>
                         <div class="add-to-play-list"><i class="fa-solid fa-plus"></i></div>
                     </div>
-                    <div class="time-view">
+                    <div class="time-section">
+
                         <div class="music-time">
-                            <p class="current-time"></p>
+                            <p class="current-time">00:00</p>
+                        </div>
+                        <div class="progress-container" id="progress-container">
+                            <div class="progress"> </div>
+                            <span class="ball"></span>
                         </div>
                         <div class="music-time">
-                            <p class="total-time"></p>
+                            <p class="total-time">00:00</p>
                         </div>
                     </div>
-                    <div class="time-line"></div>
                     <div class="controls">
                         <div class="backward"><i class="fa-solid fa-backward"></i></div>
-                        <div class="play"><i class="fa-solid fa-play"></i></div>
-                        <div class="pause"><i class="fa-solid fa-pause"></i></div>
+                        <div class="play" id="play"><i class="fa-solid fa-play play-and-pause"></i></div>
+                        <!-- <div class="pause"><i class="fa-solid fa-pause"></i></div> -->
                         <div class="forward"><i class="fa-solid fa-forward"></i></div>
                     </div>
                 </div>
@@ -46,10 +58,6 @@
         </div>
 
     </div>
-
-
-
-
 
     <script src="https://kit.fontawesome.com/d42e6cc261.js" crossorigin="anonymous"></script>
     <script src="/musicplayer.js"></script>
